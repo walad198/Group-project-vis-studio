@@ -9,7 +9,7 @@
 
 * {
     font-family: cursive;
-    box-sizing: padding-box;
+    box-sizing: border-box;
 }
 
 form {
