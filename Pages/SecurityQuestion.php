@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <header>Security Question</header>
+    <h1>Security Question</h1>
     <div>
         <form>
             <label>What is your childhood pet's name?</label>

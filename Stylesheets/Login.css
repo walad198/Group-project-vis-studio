@@ -1,4 +1,4 @@
-﻿.container {
+﻿.form-container {
     min-height: 457px;
     width: 485px;
     margin: 0 auto;
@@ -73,4 +73,14 @@ h2 {
     color: red;
 }
 
-  
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Adjust as needed */
+}
+
+h1 {
+    margin-bottom: -100px; /* Adjust as needed */
+}
