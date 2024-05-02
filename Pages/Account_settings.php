@@ -20,34 +20,35 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user_name'])) {
     $2fa_question = $_POST["2fa_question"];
     $2fa_answer = $_POST["2fa_answer"];*/
 
-    // Validate form data (ensure required fields are not empty, passwords match, etc.)
+// Validate form data (ensure required fields are not empty, passwords match, etc.)
 
-    // Process saving settings to the database
-    // Example:
-    // $success = saveSettings($account_name, $job_title, $email, $new_password, $2fa_question, $2fa_answer);
+// Process saving settings to the database
+// Example:
+// $success = saveSettings($account_name, $job_title, $email, $new_password, $2fa_question, $2fa_answer);
 
-    // Redirect to appropriate page based on success or failure
-    // Example:
-    // if ($success) {
-    //     header("Location: account_settings.php?success=1");
-    //     exit();
-    // } else {
-    //     $error_message = "Failed to save settings. Please try again.";
-    // }
-}
+// Redirect to appropriate page based on success or failure
+// Example:
+// if ($success) {
+//     header("Location: account_settings.php?success=1");
+//     exit();
+// } else {
+//     $error_message = "Failed to save settings. Please try again.";
+// }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Account Settings</title>
-    <link rel="stylesheet" type="text/css" href="dashboard_style.css" />
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/dashboard_style.css" />
 </head>
+
 <body>
     <div class="container">
         <h1>Account Settings</h1>
         <?php if (isset($error_message)) { ?>
-        <p class="error"><?php echo $error_message; ?></p>
+            <p class="error"><?php echo $error_message; ?></p>
         <?php } ?>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="form-group">
@@ -91,4 +92,5 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user_name'])) {
         <a href="logout.php"><img src="head_icon.png" alt="Head Icon" /></a>
     </div>
 </body>
-</html>    
+
+</html>

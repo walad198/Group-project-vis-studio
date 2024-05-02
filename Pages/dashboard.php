@@ -9,10 +9,12 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user_name'])) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="dashboard_style.css" />
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/dashboard_style.css" />
 </head>
+
 <body>
     <div class="container">
         <h1>Welcome to Your Dashboard, <?php echo $_SESSION['user_name']; ?>!</h1>
@@ -40,4 +42,5 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['user_name'])) {
         <a href="logout.php">Logout</a>
     </div>
 </body>
+
 </html>
