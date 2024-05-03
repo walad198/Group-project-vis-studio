@@ -121,6 +121,7 @@ body{
     padding: 0;
     margin: 0;
 }
+
 svg {
     z-index: -1;
     position: absolute;
@@ -134,5 +135,4 @@ svg {
     background-color: #0e4166;
     background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
 }   
-
 

@@ -4,10 +4,10 @@ $sname = "localhost";
 $unmae = "root";
 $password = "";
 
-$db_name = "test_db";
+$db_name = "groupdatabase";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
-if($conn) {
+if ($conn) {
     echo "Connection Failed";
 }
