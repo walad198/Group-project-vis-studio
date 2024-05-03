@@ -5,7 +5,7 @@
   <PropertyGroup>
     <EnvName>PHPDev</EnvName>
     <RuntimeVersion>8.2</RuntimeVersion>
-    <SpecificPageValue>Pages/index.html</SpecificPageValue>
+    <SpecificPageValue>Pages/index.php</SpecificPageValue>
     <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
 </Project>
