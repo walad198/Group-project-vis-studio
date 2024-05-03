@@ -2,7 +2,7 @@
 
 $sname = "localhost";
 $unmae = "root";
-$password = "";
+$password = "password";
 
 $db_name = "groupdatabase";
 
