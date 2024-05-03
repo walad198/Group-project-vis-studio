@@ -13,7 +13,7 @@ if (isset($_SESSION['Staff_ID']) && isset($_SESSION['Username'])) {
     </head>
 
     <body>
-        <h1>Hello, <?php echo $_SESSION['user_name']; ?> ?></h1>
+        <h1>Hello, <?php echo $_SESSION['Username']; ?> ?></h1>
         <a href="logout.php">Logout</a>
         <br /><br />
         <!-- Added button to go to dashboard -->
