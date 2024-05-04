@@ -36,7 +36,7 @@ if (!isset($_SESSION['Staff_ID']) || !isset($_SESSION['Username'])) {
             <ul>
                 <li><a href="Account_settings.php">Account settings</a></li>
                 <li><a href="Manage_stock.php">Manage stock</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="Scan.php">Scan qr</a></li>
             </ul>
         </div>
         <a href="logout.php">Logout</a>
