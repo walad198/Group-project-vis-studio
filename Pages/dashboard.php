@@ -16,8 +16,8 @@ if (!isset($_SESSION['Staff_ID']) || !isset($_SESSION['Username'])) {
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome to Your Dashboard, <?php echo $_SESSION['user_name']; ?>!</h1>
+    <div class="container-card">
+        <h1>Welcome to Your Dashboard, <?php echo $_SESSION['Firstname']; ?>!</h1>
         <div class="card">
             <h2>Shop Statistics</h2>
             <p>Ammount of products: 0</p>
@@ -32,15 +32,19 @@ if (!isset($_SESSION['Staff_ID']) || !isset($_SESSION['Username'])) {
             </ul>
         </div>
         <div class="card">
-            <h2>Links</h2>
+            <h2>Quick Actions</h2>
             <ul>
-                <li><a href="Account_settings.php">Account settings</a></li>
-                <li><a href="Manage_stock.php">Manage stock</a></li>
-                <li><a href="Scan.php">Scan qr</a></li>
+                <li><a href="Account_settings.php"><button class="linksBtn">Account settings</button></a></li>
+                <li><a href="Manage_stock.php"><button class="linksBtn">Manage Stock</button></a></li>
+                <li><a href="Scan.php"><button class="linksBtn">Scan QR</button></a></li>
             </ul>
         </div>
-        <a href="logout.php">Logout</a>
+
+        <div class="conatiner">
+            <a href="logout.php"><button class="logoutBtn">Logout</button></a>
+        </div>
     </div>
+
 </body>
 
 </html>

@@ -1,0 +1,133 @@
+.container {
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(215, 215, 215);
+    border-radius: 8px;
+  }
+  
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+  
+.product-info {
+    display: flex;
+  }
+  
+
+  
+.product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+.product-details {
+    padding-right: 200px;
+    padding-left: 50px;
+    width: 200px;
+    left: 140px;
+    position: relative;
+  }
+  
+.description {
+    text-align: center;
+    top: -20px;
+    position: relative;
+}
+  
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+.quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+.btn-increase,
+.btn-decrease {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+.buttons {
+    margin-top: 20px;
+  }
+  
+.save-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+.cancel-btn {
+    background-color: #dc3545;
+  }
+  
+.productTitle{
+    text-align: center;
+    position: relative;
+    top: 0px;
+    padding-bottom: 5px;
+    padding-top: 40px;
+}
+
+
+.placeholder{
+    position: relative;
+    right: 140px;
+    top: -40px;
+
+}
+
+body {
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.product-description{
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -40px;
+    width: 320px;
+}
+
+.image{
+    position: relative;
+    top: 0px;
+    left: 40px;
+    width: 70%;
+    height: 70%;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stock-item-name,
+.stock-item-id,
+.supplier-name{
+    min-width: 218px;
+}

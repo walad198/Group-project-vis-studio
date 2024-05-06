@@ -1,15 +1,13 @@
 <?php
 session_start();
 
-// Check if the user is logged in
+
 if (!isset($_SESSION['Staff_ID']) || !isset($_SESSION['Username'])) {
     header("Location: index.php");
     exit();
 }
 
-// Include any necessary files and database connections
 
-// Process form submission (updating product information)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $item_name = $_POST["item_name"];
@@ -39,65 +37,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Update Product Information</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../Stylesheets/managestock.css" />
 </head>
+
 <body>
     <div class="container">
-        <h1>Update Product Information</h1>
-        <?php if (isset($error_message)) { ?>
-            <p class="error"><?php echo $error_message; ?></p>
-        <?php } ?>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div class="form-group">
-                <label for="item_name">Stock Item Name:</label>
-                <input type="text" name="item_name" id="item_name" value="" required />
+        <h2 class="title">Update Product Information</h2>
+        <div class="product-info">
+            <div class="product-image">
+                <img class="image" src="../images/mouse.png" alt="Product Image">
+                <div class="product-description">
+                    <h3 class="productTitle">Gaming Mouse</h3> <!-- Change to pull from databse -->
+                    <p class="description">A gaming mouse is a specialized computer peripheral tailored for gaming,
+                        characterized by its ergonomic design ensuring comfort during prolonged gaming sessions, high
+                        DPI
+                        for precise cursor movements, programmable buttons enabling quick execution of in-game actions.
+                    </p> <!-- Change to pull from databse -->
+                </div>
+
             </div>
-            <div class="form-group">
-                <label for="item_id">Stock Item ID#:</label>
-                <input type="text" name="item_id" id="item_id" value="" />
+            <div class="product-details">
+
+                <div class="input-group">
+                    <input type="text" class="stock-item-name" placeholder="">
+                    <span class="placeholder">Stock Item Name</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="stock-item-id" placeholder="">
+                    <span class="placeholder">Stock Item ID#</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="supplier-name" placeholder="">
+                    <span class="placeholder">Supplier Name</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" class="quantity-input" value="1">
+                    <span class="placeholder">Quantity</span>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="price" placeholder="">
+                    <span class="placeholder">Price</span>
+                </div>
+
+                <div class="dropdown-container">
+                    <label class="placeholder" for="dropdown">Choose an option:</label>
+                    <select id="dropdown">
+                        <option value="option1">Mobile Phone</option> <!--  Update to the database catagories -->
+                        <option value="option2">Peripheral</option>
+                        <option value="option3">Opition 3</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="supplier_name">Supplier Name:</label>
-                <input type="text" name="supplier_name" id="supplier_name" value="" />
-            </div>
-            <div class="form-group">
-                <label for="supplier_id">Supplier ID:</label>
-                <input type="text" name="supplier_id" id="supplier_id" value="" />
-            </div>
-            <div class="form-group">
-                <label for="quantity">Quantity#:</label>
-                <input type="text" name="quantity" id="quantity" value="0" />
-                <button type="button" onclick="decrement()">-</button>
-                <button type="button" onclick="increment()">+</button>
-            </div>
-            <div class="form-group">
-                <label for="price_per_unit">Price/Unit (GBP £):</label>
-                <input type="text" name="price_per_unit" id="price_per_unit" value="" />
-            </div>
-            <div class="form-group">
-                <label for="item_category">Item Category:</label>
-                <input type="text" name="item_category" id="item_category" value="" />
-            </div>
-            <button type="submit" class="btn">Update Product Information</button>
-        </form>
+        </div>
+        <div class="buttons">
+            <button class="save-btn">Save</button>
+            <button class="cancel-btn">Cancel</button>
+        </div>
     </div>
+
+
 </body>
+
 </html>
-
-<script>
-    function increment() {
-        var quantityInput = document.getElementById('quantity');
-        var quantityValue = parseInt(quantityInput.value);
-        quantityInput.value = quantityValue + 1;
-    }
-
-    function decrement() {
-        var quantityInput = document.getElementById('quantity');
-        var quantityValue = parseInt(quantityInput.value);
-        if (quantityValue > 0) {
-            quantityInput.value = quantityValue - 1;
-        }
-    }
-</script>

@@ -55,7 +55,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
                 $_SESSION['Staff_ID'] = $row['Staff_ID'];
 
-                header("Location: home.php");
+                header("Location: dashboard.php");
 
                 exit();
 
