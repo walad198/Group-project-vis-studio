@@ -13,11 +13,21 @@ if (isset($_SESSION['Staff_ID']) && isset($_SESSION['Username'])) {
     </head>
 
     <body>
-        <h1>Hello, <?php echo $_SESSION['Username']; ?> ?></h1>
-        <a href="logout.php">Logout</a>
+        <h1>Hello, <?php echo $_SESSION['Firstname']; ?> </h1>
+        <form action="logout.php">
+            <input class="logoutBtn" type="submit" value="Logout" />
+        </form>
         <br /><br />
-        <!-- Added button to go to dashboard -->
+
         <a href="dashboard.php"><button>Go to Dashboard</button></a>
+
+
+        //Add shop metrics
+        //Link to dashboard
+        //Link to search for items
+
+
+
     </body>
 
     </html>
