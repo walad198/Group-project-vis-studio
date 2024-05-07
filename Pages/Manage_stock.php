@@ -42,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         document.getElementById("Quantity").value = response.Quantity;
                         document.getElementById("PPU").value = response.PPU;
                         document.getElementById("Item_Desc").innerHTML = response.Item_Desc;
+                        var productImage = document.getElementById("productImage");
+                        productImage.src = "../images/" + item_id + ".png";
+
                     } else {
                         alert('Error: ' + xhr.status);
                     }
@@ -88,6 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         function clearFields() {
+            productImage.src = "";
             document.getElementById("itemTitle").innerHTML = "";
             document.getElementById("itemName").value = "";
             document.getElementById("item_id").value = "";
@@ -109,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 class="title">Update Product Information</h2>
         <div class="product-info">
             <div class="product-image">
-                <img class="image" src="../images/mouse.png" alt="Product Image">
+                <img id="productImage" class="image" src="" alt="Product Image">
                 <div class="product-description">
                     <h3 class="productTitle" id="itemTitle"></h3> <!-- Change to pull from database -->
                     <p class="description" name="Item_Desc" id="Item_Desc"></p>
