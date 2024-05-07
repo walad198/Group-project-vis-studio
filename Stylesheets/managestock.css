@@ -73,11 +73,13 @@ input[type="number"] {
 .save-btn,
 .cancel-btn {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 5px;
     border: none;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
+  
   }
   
 .cancel-btn {
@@ -130,4 +132,30 @@ body {
 .stock-item-id,
 .supplier-name{
     min-width: 218px;
+}
+
+
+.optionText{
+  position: relative;
+  top: 0px;
+  right: 140px;
+}
+.option{
+  position: relative;
+  border-radius: 5px;
+  border-width: 0;
+  right: -59px;
+}
+
+.search{
+  padding: 5px 5px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  left: 130px;
+  top: -41px;
 }
