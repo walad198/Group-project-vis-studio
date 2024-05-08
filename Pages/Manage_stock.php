@@ -160,6 +160,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="save-btn" onclick="saveItem()">Save</button>
             <button class="cancel-btn" onclick="clearFields()">Clear</button>
         </div>
+
+    </div>
+    <div class="top-links">
+        <button class="dashboardBtn"> <a href="dashboard.php">Dashboard</a> </button>
+        <button class="logoutBtn"><a href="logout.php">Logout</a></button>
     </div>
 
 </body>

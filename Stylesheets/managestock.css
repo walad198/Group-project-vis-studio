@@ -79,6 +79,7 @@ input[type="number"] {
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    font-family: 'Poetsen One', sans-serif;
   
   }
   
@@ -158,4 +159,27 @@ body {
   position: relative;
   left: 130px;
   top: -41px;
+}
+
+.top-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.top-links a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.dashboardBtn,
+.logoutBtn{
+    background-color: #007bff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+    position: relative;
+    top: 0px;
+    font-family: 'Poetsen One', sans-serif;
 }

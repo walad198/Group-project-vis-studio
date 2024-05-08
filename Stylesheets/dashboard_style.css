@@ -1,5 +1,4 @@
 ﻿body {
-    font-family: Arial, sans-serif;
     background-color: #f3f4f6;
     margin: 0;
     padding: 0;
@@ -7,6 +6,7 @@
     min-height: 100vh;
     justify-content: center;
     align-items: flex-end;
+    font-family: 'Poetsen One', sans-serif;
 }
 
 .container-card {
