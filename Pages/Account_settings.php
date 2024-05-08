@@ -11,7 +11,7 @@ if (!isset($_SESSION['Staff_ID']) || !isset($_SESSION['Username'])) {
 include ('db_conn.php');
 
 $staff_id = $_SESSION['Staff_ID'];
-$query = "SELECT Firstname, Job_Desc, E_mail FROM staff WHERE Staff_ID = ?";
+$query = "SELECT Firstname, Job_Desc, E_mail, Username FROM staff WHERE Staff_ID = ?";
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $staff_id);
 $stmt->execute();
@@ -61,16 +61,9 @@ $conn->close();
                     <input class="input" type="password" name="new_password" id="new_password" />
                 </div>
                 <div class="form-group">
-                    <label class="confirm_password" for="confirm_password">Confirm Password:</label>
-                    <input class="input" type="password" name="confirm_password" id="confirm_password" />
-                </div>
-                <div class="form-group">
-                    <label for="2fa_question">2FA Question:</label>
-                    <input class="input" type="text" name="2fa_question" id="2fa_question" />
-                </div>
-                <div class="form-group">
-                    <label for="2fa_answer">2FA Answer:</label>
-                    <input class="input" type="text" name="2fa_answer" id="2fa_answer" />
+                    <label for="username">Username:</label>
+                    <input class="input" type="text" name="username" id="username"
+                        value="<?php echo $user['Username']; ?>" />
                 </div>
                 <button type="submit" class="btn">Save Settings</button>
             </form>
